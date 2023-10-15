@@ -5,3 +5,4 @@ Rendition of Brian Eno's "Discreet Music" made following [this](https://teropa.i
 The web page can be served using Vite.
 1. Run `npm install` to install the dependencies.
 2. Run a dev version using `npm run dev`.
+3. Navigate your browser to `http://localhost:5173`.
