@@ -22,6 +22,7 @@ rightPanner.connect(echo)
 // echo -> master
 echo.toDestination()
 echo.connect(delay);
+// delayed player feeds into destination and itself
 delay.connect(delay.context.destination)
 delay.connect(delayFade);
 delayFade.connect(delay);
