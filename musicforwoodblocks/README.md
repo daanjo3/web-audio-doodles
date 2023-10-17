@@ -1,5 +1,5 @@
-# Discreet Music
-Rendition of Brian Eno's "Discreet Music" made following [this](https://teropa.info/blog/2016/07/28/javascript-systems-music#brian-enodiscreet-music1975) tutorial by Teropa.
+# Music for Pieces of Wood
+Rendition of Steve Reich's "Music for Pieces of Wood". Very much WIP.
 
 ## How to run
 The web page can be served using Vite.
