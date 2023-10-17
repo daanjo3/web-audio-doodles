@@ -6,7 +6,7 @@ export function start() {
 
   new Tone.Loop((time) => {
     woodblock.triggerAttackRelease("C5", "0:1", time)
-  }, "1m").start();
+  }, "3m").start();
 
   Tone.Transport.start();
   Tone.start();

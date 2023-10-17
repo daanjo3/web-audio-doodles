@@ -5,6 +5,6 @@ export function makeWoodblock() {
     urls: {
       'C5': '5_C_2-PB.wav'
     },
-    baseUrl: 'https://github.com/daanjo3/web-audio-doodles/blob/musicforwoodblocks/musicforwoodblocks/samples/virtual-orchestra/'
+    baseUrl: 'https://daanjo3.github.io/web-audio-doodles/musicforwoodblocks/samples/virtual-orchestra/'
   })
 }
