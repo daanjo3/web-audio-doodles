@@ -1,11 +1,11 @@
-import * as Tone from 'tone'
+import * as Tone from "tone";
 
 export function makeWoodblock() {
   return new Tone.Sampler({
     urls: {
-      "C5"  : "samples/virtual-orchestra/5_C_2-PB.wav"
-    }
-  })
+      C5: "samples/virtual-orchestra/5_C_2-PB.wav",
+    },
+  });
 }
 
 /*

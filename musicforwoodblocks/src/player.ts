@@ -1,28 +1,33 @@
 import * as Tone from "tone";
 import { woodblock } from "./graph";
 
-import scoreData from './parts.json';
+import scoreData from "./parts/data.json";
+import type { Part } from "./parts";
 
-export function makePart( partData:any ) {
-  const part = new Tone.Part(((time, note) => {
+export function makePart(partData: Part) {
+  const part = new Tone.Part((time, note) => {
     woodblock.triggerAttackRelease(note, "8n", time);
-  }), partData.pattern );
+  }, partData.pattern);
   part.loop = partData.loop;
   part.start(partData.start);
 }
 
 export function start() {
   Tone.Transport.bpm.value = 108;
-  Tone.Transport.timeSignature = 3 
+  Tone.Transport.timeSignature = 3;
 
-  for(const partNumber in scoreData){
-    makePart(scoreData[partNumber]);
-  }
+  // Register each part of the score
+  scoreData.forEach(makePart);
 
   Tone.Transport.start();
   Tone.start();
 }
 
 export function stop() {
-    Tone.Transport.stop()
+  Tone.Transport.stop();
+}
+
+// Register a Tone Transport event listener
+export function registerPlayerListener(eventName: 'start' | 'stop', callback: () => void) {
+  Tone.Transport.on(eventName, callback)
 }

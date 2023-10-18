@@ -3,7 +3,7 @@
         "instrument": "clave1",
         "partnumber": 1,
         "loop": 14,
-        "start":0,
+        "start": "0m",
         "pattern" : [
             ["0:0:1","D#6"],
             ["0:0:3","D#6"], 
